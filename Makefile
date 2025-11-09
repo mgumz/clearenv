@@ -26,5 +26,8 @@ git-archive:
 	git archive -o clearenv.tgz HEAD
 
 
+update-manpage:
+	pandoc README.md -s -t man -o clearenv.1
+
 run-dev-container:
 	podman run -it --rm -v `pwd`:/build debian:trixie-slim
