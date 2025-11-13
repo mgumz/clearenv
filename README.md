@@ -45,6 +45,27 @@ See LICENSE file, BSD-3 clause.
 
     make clearenv
 
+### Different Implementations
+
+For fun, there are different implementations in various programming languages,
+mainly for education purposes, partially to compare the relative complexity of
+the languages, the resulting binary size etc.
+
+See the `*-lang` folders.
+
+| Flavour                                    | Binary size   |
+| ------------------------------------------ | ------------- |
+| c-lang/clearenv (MacOS dynamically linked) | 34k           |
+| c-lang/clearenv (Linux dynamically linked) | 69k           |
+| c-lang/clearenv (Linux statically linked)  | 584k          |
+| c-lang/clearenv (Linux static diet)        | 71k           |
+| go-lang/clearenv (MacOS, Golang-1.25.1)    | 1340k         |
+| go-lang/clearenv (MacOS, Tinygo-0.39.0)    | 202k          |
+| rust-lang/clearenv (MacOS, Rust-1.89)      | 292k          |
+| rust-lang/clearenv (Linux, Rust-1.91)      | 333k          |
+| zig-lang/clearenv (MacOS, Zig-0.15.2)      | 74k           |
+
+
 ## Related
 
 * GNU `env(1)`: https://man7.org/linux/man-pages/man1/env.1.html

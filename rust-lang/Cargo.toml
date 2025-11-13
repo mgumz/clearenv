@@ -1,0 +1,15 @@
+[package]
+name = "clearenv"
+version = "0.1.0"
+edition = "2024"
+
+[profile.release]
+opt-level = "z"        # Optimize for size instead of speed
+lto = true             # Enable Link Time Optimization
+codegen-units = 1      # Single codegen unit for better optimization
+strip = true           # Strip symbols from binary
+panic = "abort"        # Smaller panic handler (vs "unwind")
+debug = false          # Don't include debug info (enabled by default in release)
+
+[dependencies]
+libc = "0.2"
